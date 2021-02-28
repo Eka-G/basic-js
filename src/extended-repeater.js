@@ -4,9 +4,9 @@ module.exports = function repeater(str, options) {
   let res = "",
     value = str;
 
-  if (!options["separator"]) options["separator"] = "+";
-  if (!options["repeatTimes"]) options["repeatTimes"] = 1;
-  if (!options["additionRepeatTimes"]) options["additionRepeatTimes"] = 1;
+  if (options["separator"] === undefined) options["separator"] = "+";
+  if (options["repeatTimes"] === undefined) options["repeatTimes"] = 1;
+  if (options["additionRepeatTimes"] === undefined) options["additionRepeatTimes"] = 1;
 
   if (options["addition"] !== undefined) {
     for (let i = 0; i < options["additionRepeatTimes"]; i++) {
